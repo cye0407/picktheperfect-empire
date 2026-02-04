@@ -1,5 +1,7 @@
 # Agent Mission
 
+> **Vendor Naming Note:** Throughout this document, "SeedSow" refers to the vendor **SeedsNow** (seedsnow.com). The abbreviated name "SeedSow" is used in field names (e.g. `availableFrom_SeedSow`) and references to maintain consistency with the codebase conventions used across other pickers in this project. Do not rename these fields; they must match the codebase.
+
 Create a normalized dataset of 100 flower varieties suitable for a decision-support picker app. Each variety must have consistent fields, scorable attributes, and short human descriptions. Output must be machine-importable and internally consistent.
 
 ## Output Format
