@@ -3,7 +3,7 @@ export type Region = "US" | "EU";
 
 export type Difficulty = "No preference" | "beginner" | "intermediate" | "advanced";
 
-export type HeatCategory = "No preference" | "mild" | "medium" | "hot" | "very_hot" | "extreme";
+export type HeatCategory = "No preference" | "none" | "mild" | "medium" | "hot" | "very_hot" | "extreme";
 
 export type PepperType = "No preference" | "bell" | "cayenne_type" | "habanero_type" | "jalapeno_type" | "thai_type" | "ornamental" | "other";
 

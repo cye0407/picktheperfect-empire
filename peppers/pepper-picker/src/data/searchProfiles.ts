@@ -69,7 +69,7 @@ export const searchProfiles: SearchProfile[] = [
     title: "Best Peppers for Asian Cooking",
     description: "Peppers perfect for Thai, Korean, and Chinese dishes",
     preset: {
-      cuisineStyle: "asian",
+      cuisineStyle: "thai",
     },
   },
   {

@@ -10,6 +10,17 @@ export const PEPPER_USE_CASES = [
   "drying",
   "roasting",
   "cooking",
+  "ornamental",
+  "jerk",
+  "challenges",
+  "novelty",
+  "marinade",
+  "curry_paste",
+  "seafood",
+  "jelly",
+  "gourmet",
+  "finishing",
+  "canning",
 ] as const;
 
 export type PepperUseCase = typeof PEPPER_USE_CASES[number];
@@ -72,3 +83,39 @@ export const PEPPER_DIFFICULTY = [
 ];
 
 export type Difficulty = "beginner" | "intermediate" | "advanced";
+
+export const PEPPER_CUISINE_AFFINITIES = [
+  "global",
+  "mexican",
+  "caribbean",
+  "korean",
+  "thai",
+  "indian",
+  "mediterranean",
+  "american",
+  "jamaican",
+  "vietnamese",
+  "asian",
+  "southwestern",
+  "peruvian",
+  "south_american",
+  "cajun",
+  "eastern_european",
+  "italian",
+  "portuguese",
+  "african",
+  "brazilian",
+  "hungarian",
+  "yucatan",
+  "tropical",
+  "florida",
+  "mozambican",
+  "andean",
+  "bolivian",
+  "bangladeshi",
+  "middle_eastern",
+  "turkish",
+  "malaysian",
+] as const;
+
+export type PepperCuisineAffinity = typeof PEPPER_CUISINE_AFFINITIES[number];
