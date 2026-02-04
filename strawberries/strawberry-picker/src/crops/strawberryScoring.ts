@@ -126,12 +126,6 @@ export function scoreStrawberry(
     }
   }
 
-  // Vendor availability bonus
-  maxScore += 5;
-  if (strawberry.availableFrom_SeedSow || strawberry.availableFrom_WestCoastSeeds) {
-    score += 5;
-  }
-
   // Ensure minimum maxScore
   if (maxScore < 25) {
     maxScore = 25;

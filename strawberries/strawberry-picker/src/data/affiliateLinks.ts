@@ -20,8 +20,8 @@ const WCS_REF = "?rfsn=8639095.6ec160";
 const affiliateLinks: StrawberryAffiliateLinks = {
   // SeedsNow varieties (bare root plants)
   "Seascape": [{ vendor: "SeedsNow", url: `https://www.seedsnow.com/products/strawberry-roots-bundles-seascape${SEEDSNOW_REF}`, region: "US" }],
-  "San Andreas": [{ vendor: "SeedsNow", url: `https://www.seedsnow.com/products/monterey-strawberry-roots-bundles${SEEDSNOW_REF}`, region: "US" }],
-  "Jewel": [{ vendor: "SeedsNow", url: `https://www.seedsnow.com/products/albion-strawberry-roots${SEEDSNOW_REF}`, region: "US" }],
+  "San Andreas": [{ vendor: "SeedsNow", url: `https://www.seedsnow.com/products/san-andreas-strawberry-roots-bundles${SEEDSNOW_REF}`, region: "US" }],
+  "Jewel": [{ vendor: "SeedsNow", url: `https://www.seedsnow.com/products/jewel-strawberry-roots${SEEDSNOW_REF}`, region: "US" }],
 
   // West Coast Seeds varieties (seeds)
   "Fresca": [{ vendor: "West Coast Seeds", url: `https://www.westcoastseeds.com/products/fresca${WCS_REF}`, region: "US" }],
