@@ -1,0 +1,51 @@
+Name,URL
+Agastache,https://www.westcoastseeds.com/collections/agastache-seeds
+Alyssum,https://www.westcoastseeds.com/collections/alyssum-seeds
+Amaranth,https://www.westcoastseeds.com/collections/amaranth-seeds
+Aster,https://www.westcoastseeds.com/collections/aster-seeds
+Baby Blue Eyes,https://www.westcoastseeds.com/collections/nemophila-seeds
+Baby's Breath,https://www.westcoastseeds.com/collections/gypsophila-seeds
+Calendula,https://www.westcoastseeds.com/collections/calendula-seeds
+California Poppy,https://www.westcoastseeds.com/collections/california-poppy-seeds
+Campanula,https://www.westcoastseeds.com/collections/campanula-seeds
+Celosia,https://www.westcoastseeds.com/collections/celosia-seeds
+Cleome,https://www.westcoastseeds.com/collections/cleome-seeds
+Columbine,https://www.westcoastseeds.com/collections/columbine-seeds
+Coreopsis,https://www.westcoastseeds.com/collections/coreopsis-seeds
+Cornflower,https://www.westcoastseeds.com/collections/cornflower-seeds
+Cosmos,https://www.westcoastseeds.com/collections/cosmos-seeds
+Daisy,https://www.westcoastseeds.com/collections/daisy-seeds
+Delphinium,https://www.westcoastseeds.com/collections/delphinium-seeds
+Dianthus,https://www.westcoastseeds.com/collections/dianthus-seeds
+Echinacea,https://www.westcoastseeds.com/collections/echinacea-seeds
+Eucalyptus,https://www.westcoastseeds.com/collections/eucalyptus-seeds
+Flax,https://www.westcoastseeds.com/collections/flax-seeds
+Foxglove,https://www.westcoastseeds.com/collections/foxglove-seeds
+Gaillardia,https://www.westcoastseeds.com/collections/gaillardia-seeds
+Hollyhocks,https://www.westcoastseeds.com/collections/hollyhocks-seeds
+Lavatera,https://www.westcoastseeds.com/collections/lavatera-seeds
+Lobelia,https://www.westcoastseeds.com/collections/lobelia-seeds
+Lupin,https://www.westcoastseeds.com/collections/lupin-seeds
+Marigold,https://www.westcoastseeds.com/collections/marigold-seeds
+Milkweed,https://www.westcoastseeds.com/collections/milkweed-seeds
+Morning Glory,https://www.westcoastseeds.com/collections/morning-glory-seeds
+Nasturtium,https://www.westcoastseeds.com/collections/nasturtium-seeds
+Native Flower,https://www.westcoastseeds.com/collections/native-flower-seeds
+Nicotiana,https://www.westcoastseeds.com/collections/nicotiana-seeds
+Nigella,https://www.westcoastseeds.com/collections/nigella-seeds
+Pansies & Viola,https://www.westcoastseeds.com/collections/viola-seeds
+Petunia,https://www.westcoastseeds.com/collections/petunia-seeds
+Phacelia,https://www.westcoastseeds.com/collections/phacelia-seeds
+Poppy,https://www.westcoastseeds.com/collections/poppy-seeds
+Rudbeckia,https://www.westcoastseeds.com/collections/rudbeckia-seeds
+Salvia,https://www.westcoastseeds.com/collections/salvia-seeds
+Scabiosa,https://www.westcoastseeds.com/collections/scabiosa-seeds
+Snapdragon,https://www.westcoastseeds.com/collections/snapdragon-seeds
+Statice,https://www.westcoastseeds.com/collections/statice-seeds
+Stock,https://www.westcoastseeds.com/collections/stock-seeds
+Strawflower,https://www.westcoastseeds.com/collections/strawflower-seeds
+Sunflower,https://www.westcoastseeds.com/collections/sunflower-seeds
+Sweet Pea,https://www.westcoastseeds.com/collections/sweet-pea-seeds
+Wildflower,https://www.westcoastseeds.com/collections/wildflower-seeds
+Yarrow,https://www.westcoastseeds.com/collections/yarrow-seeds
+Zinnia,https://www.westcoastseeds.com/collections/zinnia-seeds

@@ -1,0 +1,385 @@
+Agent Mission
+
+Create a normalized dataset of 100 pepper/chili varieties suitable for a decision-support picker app. Each variety must have consistent fields, scorable attributes, and short human descriptions. Output must be machine-importable and internally consistent.
+
+Output Format
+
+Deliver one CSV (or JSON if easier, but default CSV) with exact headers below.
+
+One row per variety
+
+Arrays in CSV must be pipe-delimited, e.g. Sauce|Pickling|Fresh
+
+Keep numeric fields numeric (no text like “high” in numeric columns)
+
+File name: pepper_varieties_v1.csv
+
+Required Schema (Headers)
+
+Use these headers exactly:
+
+Identity
+
+id (1–100)
+
+name
+
+alternateNames (pipe list)
+
+species (enum: annuum|chinense|baccatum|frutescens|pubescens)
+
+type (enum: bell|jalapeno_type|cayenne_type|thai_type|habanero_type|poblano_type|paprika_type|ornamental|other)
+
+description (1–2 sentences, practical)
+
+Heat & Flavor (scorable)
+
+heatSHU_min
+
+heatSHU_max
+
+heatCategory (none|mild|medium|hot|very_hot|extreme)
+
+sweetness (1–10)
+
+fruitiness (1–10)
+
+smokiness (1–10)
+
+bitterness (1–10)
+
+earthiness (1–10)
+
+Culinary
+
+bestUses (pipe list; choose from: fresh|salsa|hot_sauce|fermenting|drying|powder|pickling|stuffing|roasting|grilling)
+
+cuisineAffinity (pipe list; choose from: mexican|thai|korean|chinese|indian|mediterranean|caribbean|italian|global)
+
+prepBest (pipe list; choose from: raw|roasted|smoked|fermented|dried)
+
+Growth
+
+daysToMaturity_min
+
+daysToMaturity_max
+
+plantHeightCm_min
+
+plantHeightCm_max
+
+growthHabit (compact|bushy|tall)
+
+yieldLevel (low|medium|high)
+
+difficulty (beginner|intermediate|advanced)
+
+Environment & Setup
+
+climateSuitability (pipe list; cool|temperate|hot)
+
+heatTolerance (1–10)
+
+coldTolerance (1–10)
+
+containerFriendly (true|false)
+
+minPotLiters (number; if unknown use blank)
+
+indoorSuitable (true|false)
+
+greenhouseRecommended (true|false)
+
+Physical
+
+lengthCm_min
+
+lengthCm_max
+
+wallThickness (thin|medium|thick)
+
+colorStages (pipe list; green|yellow|orange|red|purple|brown|black|white)
+
+Resilience (optional but preferred)
+
+diseaseNotes (short text; blank allowed)
+
+Data Quality
+
+sources (pipe list of 2–4 reputable sources; short domain names or publication names)
+
+confidence (high|medium|low)
+
+Variety Selection Rules (Must Follow)
+
+Balance the catalog
+
+~25 mild/none (bells, poblanos, frying peppers, paprika types)
+
+~35 medium/hot (jalapeño, serrano, cayenne, thai, etc.)
+
+~30 very_hot/extreme (chinense-heavy: habanero/scotch bonnet/superhots)
+
+~10 unusual/specialty (pubescens/rocoto, rare colors, ornamental, baccatum like aji)
+
+Include famous + practical
+
+Must include: Bell (California Wonder), Jalapeño, Serrano, Cayenne, Thai/Bird’s Eye, Habanero, Scotch Bonnet, Poblano/Ancho, Shishito, Padron, Anaheim, Hungarian Wax, Banana Pepper, Ghost Pepper (Bhut Jolokia), Carolina Reaper, Trinidad Scorpion, Aji Amarillo, Aji Lemon Drop, Rocoto.
+
+Avoid junk entries
+
+No “generic pepper” placeholders.
+
+No duplicate varieties under different names unless you list the alt name.
+
+Keep it picker-focused
+
+Descriptions must help someone choose (taste + use + growing note), not history essays.
+
+How to Assign Numeric Values (Critical)
+
+You must convert qualitative descriptions into consistent numbers:
+
+Heat
+
+Use SHU ranges from reputable sources where possible.
+
+If sources disagree, choose a reasonable range and set confidence=medium.
+
+Flavor scales (1–10)
+
+Use this rule-of-thumb mapping:
+
+Sweetness
+
+“sweet / fruity / candy-like” → 7–10
+
+“balanced” → 4–6
+
+“vegetal / sharp / not sweet” → 1–3
+
+Fruitiness
+
+chinense often higher (6–10) if described fruity/tropical
+
+annuum usually lower unless described fruity
+
+Smokiness
+
+naturally smoky varieties (or commonly smoked/dried types) → 6–10
+
+otherwise 1–3
+
+Bitterness
+
+only raise if sources mention bitter notes (5–8). Otherwise keep 1–4.
+
+Earthiness
+
+poblanos/ancho types often higher (5–8)
+
+bright fresh chilis often lower (1–4)
+
+Do not max everything. The dataset must have contrast or your scoring becomes useless.
+
+Source Standards
+
+For each pepper, include 2–4 sources (prefer official or recognized references):
+
+Good source types:
+
+University extension pages
+
+Recognized seed catalogs (Johnny’s, Baker Creek, Seed Savers, Semillas, etc.)
+
+Specialty pepper databases or well-known horticultural references
+
+If you use forums/Reddit, only for flavor nuance and set confidence lower unless corroborated.
+
+The sources field should look like:
+johnnyseeds.com|chilepepperinstitute.org|rhs.org.uk
+
+(Short names are fine; no raw URLs required.)
+
+Consistency Checks (Agent Must Perform)
+
+Before final output:
+
+No missing required enums (species/type/etc.)
+
+All numeric ranges: min ≤ max
+
+All scores within 1–10
+
+heatCategory matches the SHU range
+
+At least 100 unique names
+
+At least 2 sources for every row
+
+Spot-check 10 random entries for realism
+
+Deliverable Summary (Must Include)
+
+Alongside the CSV, provide:
+
+A heat distribution count by category (none/mild/…)
+
+A species count (annuum/chinense/etc.)
+
+A short list: 10 best container peppers (based on your data)
+
+If the Agent Gets Stuck
+
+If a field cannot be found:
+
+Leave it blank only where allowed (minPotLiters, diseaseNotes)
+
+Never invent SHU with false precision; use broad ranges and set confidence=low/medium.
+
+Affiliate Coverage Requirement (Non-Negotiable)
+Mandatory Vendor Inclusion
+
+The dataset MUST include all pepper/chili varieties currently offered by the following seed vendors, because they are active affiliate partners:
+
+SeedSow (SeedSow / SeedsNow-style catalog)
+
+West Coast Seeds (Canada-based seed supplier)
+
+These varieties are not optional and must be treated as priority entries.
+
+Step 1: Build Vendor Variety Lists (Before Dataset Creation)
+
+Before populating the main dataset, the agent must:
+
+Extract a complete list of pepper/chili varieties sold by:
+
+SeedSow
+
+West Coast Seeds
+
+Normalize names:
+
+Deduplicate synonyms (e.g. “Thai Hot” vs “Thai Chili”)
+
+Preserve original vendor naming in a dedicated field
+
+Output a separate preliminary CSV:
+
+File: affiliate_pepper_seedlist.csv
+Headers:
+
+vendor (SeedSow | WestCoastSeeds)
+
+vendorVarietyName
+
+normalizedName
+
+species (if available)
+
+productURL (if available)
+
+notes (e.g. “F1 hybrid”, “organic”, “heat unclear”)
+
+This file is used as a completeness checklist.
+
+Step 2: Inclusion Rules for the Main Dataset
+Required Coverage Rules
+
+Every unique pepper variety sold by SeedSow or West Coast Seeds must appear as a row in pepper_varieties_v1.csv
+
+These varieties count toward the 100 total
+
+If total affiliate varieties exceed 100:
+
+Include all affiliate varieties
+
+Expand the dataset beyond 100 (acceptable)
+
+Do not drop affiliate items to hit an artificial cap
+
+Step 3: Vendor Metadata Fields (Add These Headers)
+
+Add the following fields to the main dataset schema:
+
+Affiliate / Vendor Fields
+
+availableFrom_SeedSow (true|false)
+
+availableFrom_WestCoastSeeds (true|false)
+
+vendorSeedList (pipe list: SeedSow|WestCoastSeeds)
+
+vendorVarietyNames (pipe list of exact catalog names)
+
+Example:
+
+availableFrom_SeedSow = true
+availableFrom_WestCoastSeeds = false
+vendorSeedList = SeedSow
+vendorVarietyNames = Jalapeño Early|Jalapeño M
+
+
+These fields are data-only and must not affect scoring logic.
+
+Step 4: Priority Data Quality Rules for Affiliate Varieties
+
+For any variety sold by SeedSow or West Coast Seeds:
+
+confidence cannot be "low"
+
+Must have ≥3 sources
+
+At least 1 seed catalog source
+
+At least 1 horticultural or pepper-reference source
+
+Flavor and heat values must be cross-validated
+
+Vendor description + independent source
+
+If data is incomplete:
+
+Use broader numeric ranges
+
+Flag uncertainty in diseaseNotes or notes
+
+Never invent precision
+
+Step 5: Reporting & Verification (Required)
+
+At delivery, the agent must include:
+
+A. Affiliate Coverage Report
+
+A short table showing:
+
+Total SeedSow pepper varieties found
+
+Total West Coast Seeds pepper varieties found
+
+% included in main dataset (must be 100%)
+
+B. Missing / Ambiguous List
+
+If any vendor variety:
+
+Has unclear naming
+
+Appears duplicated across vendors
+
+Has missing species/heat data
+
+→ List it explicitly with recommended resolution.
+
+Step 6: Why This Matters (Agent Context)
+
+This dataset is used in a decision-support picker where:
+
+Affiliate links are attached after matching
+
+Missing a vendor variety = lost monetization opportunity
+
+Biasing results toward affiliates is not allowed, but coverage is mandatory
+
+The agent’s job is coverage + accuracy, not persuasion.
