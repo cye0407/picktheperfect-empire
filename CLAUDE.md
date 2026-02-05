@@ -8,16 +8,26 @@ Decision tools that help users pick the best option for various categories. Uses
 - Tailwind CSS
 
 ## Current State
-- Tomato picker: LIVE (tomatoes/tomato-picker, separate repo submodule)
-- Potato picker: LIVE (potatoes/potato-picker, separate repo submodule)
-- Pepper picker: BUILD READY (peppers/pepper-picker, in parent repo)
-- Strawberry picker: BUILD READY (strawberries/strawberry-picker, in parent repo)
-- Flower picker: BUILD READY (flowers/flower-picker, in parent repo) — 105 varieties, 68 fields each
+- Tomato picker: LIVE
+- Potato picker: LIVE
+- Pepper picker: BUILD READY
+- Strawberry picker: BUILD READY
+- Flower picker: BUILD READY (105 varieties, 68 fields each)
+
+## Repos
+All 5 pickers are separate GitHub repos, linked as submodules in this parent repo:
+
+| Picker | Repo | Local Path |
+|--------|------|------------|
+| Tomato | `cye0407/tomato-picker` | tomatoes/tomato-picker |
+| Potato | `cye0407/pick-the-perfect-potato` | potatoes/potato-picker |
+| Pepper | `cye0407/pick-the-perfect-pepper` | peppers/pepper-picker |
+| Strawberry | `cye0407/pick-the-perfect-strawberry` | strawberries/strawberry-picker |
+| Flower | `cye0407/pick-the-perfect-flower` | flowers/flower-picker |
 
 ## Architecture
 - Each picker is a standalone Vite + React + TypeScript + Tailwind app
-- Tomato and potato are git submodules with their own repos
-- Pepper, strawberry, and flower live in the parent repo
+- All 5 are git submodules with their own repos for independent deployment
 - Each picker follows this structure:
   - src/types/ — TypeScript type definitions + preferences type
   - src/crops/ — enums, scoring logic, and variety dataset
