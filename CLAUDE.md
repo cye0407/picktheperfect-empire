@@ -10,20 +10,20 @@ Decision tools that help users pick the best option for various categories. Uses
 ## Current State
 - Tomato picker: LIVE
 - Potato picker: LIVE
-- Pepper picker: BUILD READY
-- Strawberry picker: BUILD READY
-- Flower picker: BUILD READY (105 varieties, 68 fields each)
+- Pepper picker: LIVE
+- Strawberry picker: LIVE
+- Flower picker: LIVE (105 varieties, 68 fields each)
 
-## Repos
+## Repos & Live URLs
 All 5 pickers are separate GitHub repos, linked as submodules in this parent repo:
 
-| Picker | Repo | Local Path |
-|--------|------|------------|
-| Tomato | `cye0407/tomato-picker` | tomatoes/tomato-picker |
-| Potato | `cye0407/pick-the-perfect-potato` | potatoes/potato-picker |
-| Pepper | `cye0407/pick-the-perfect-pepper` | peppers/pepper-picker |
-| Strawberry | `cye0407/pick-the-perfect-strawberry` | strawberries/strawberry-picker |
-| Flower | `cye0407/pick-the-perfect-flower` | flowers/flower-picker |
+| Picker | Repo | Live URL |
+|--------|------|----------|
+| Tomato | `cye0407/tomato-picker` | (original deployment) |
+| Potato | `cye0407/pick-the-perfect-potato` | (original deployment) |
+| Pepper | `cye0407/pick-the-perfect-pepper` | https://pepper-picker-henna.vercel.app |
+| Strawberry | `cye0407/pick-the-perfect-strawberry` | https://strawberry-picker.vercel.app |
+| Flower | `cye0407/pick-the-perfect-flower` | https://flower-picker.vercel.app |
 
 ## Architecture
 - Each picker is a standalone Vite + React + TypeScript + Tailwind app
