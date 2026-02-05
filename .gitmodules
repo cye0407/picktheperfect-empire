@@ -1,0 +1,9 @@
+[submodule "peppers/pepper-picker"]
+	path = peppers/pepper-picker
+	url = https://github.com/cye0407/pick-the-perfect-pepper.git
+[submodule "strawberries/strawberry-picker"]
+	path = strawberries/strawberry-picker
+	url = https://github.com/cye0407/pick-the-perfect-strawberry.git
+[submodule "flowers/flower-picker"]
+	path = flowers/flower-picker
+	url = https://github.com/cye0407/pick-the-perfect-flower.git
