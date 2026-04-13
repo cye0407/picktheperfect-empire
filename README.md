@@ -11,6 +11,16 @@ A network of picker tools that help people make decisions, monetized through con
 - **picktheperfecttomato.com** - Live, hosted on Vercel
 - Code repo: `tomato-picker` (GitHub, private)
 
+## Next Steps
+
+- SEO foundation across each picker: unique titles, meta descriptions, canonicals, Open Graph tags, sitemap/robots checks, and structured data where useful
+- Expand search-entry content clusters for high-intent terms like "best tomatoes for containers", "best potatoes for mashing", and beginner-focused queries
+- Connect content to conversion paths by mapping article pages and picker presets to the right result states and guides
+- Complete the affiliate pathway for each crop: seeds/plants, containers, supports, soil, fertilizer, and tools
+- Fill region-specific affiliate gaps so results always have a relevant next action in the full growing pathway
+- Add simple click tracking for presets, result selections, and affiliate CTA groups to identify what converts
+- Clean up top-level repo wiring so nested picker repos are represented consistently and the parent repo is reproducible
+
 ## Expansion Path
 
 ```
