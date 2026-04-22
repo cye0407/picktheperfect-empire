@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pick the Right Tomato | Expert Variety Recommendations for Your Garden</title>
+  <meta name="description" content="Find the perfect tomato variety for your growing conditions, space, and culinary needs. Expert-guided recommendations matched to your garden.">
+</head>
+<body>
+
+<style>
+  :root{
+    --bg: #fafaf9;
+    --bg2: #ffffff;
+    --ink: #1c1917;
+    --muted: #57534e;
+    --line: rgba(28,25,23,0.10);
+    --tomato: #dc2626;
+    --leaf: #15803d;
+    --sun: #ea580c;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+    --radius: 8px;
+    --max: 1080px;
+  }
+
+  body{ margin:0; padding: 32px 16px; background: var(--bg); }
+  .tp-wrap *{ box-sizing:border-box; }
+  .tp-wrap{
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+    color: var(--ink);
+  }
+  .tp-wrap a{ color: inherit; text-decoration: none; }
+  .tp-wrap h1, .tp-wrap h2, .tp-wrap h3{ line-height:1.15; margin:0 0 10px; }
+  .tp-wrap p{ margin:0 0 12px; color: var(--muted); line-height: 1.6; }
+  .tp-wrap ul{ margin: 10px 0 0 18px; color: var(--muted); line-height: 1.6; }
+  .tp-wrap li{ margin: 6px 0; }
+
+  .tp-hero{
+    border-radius: var(--radius);
+    padding: 44px 22px;
+    background: linear-gradient(to bottom, #f5f5f4 0%, #ffffff 100%);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--line);
+  }
+  .tp-container{ max-width: var(--max); margin: 0 auto; }
+
+  .tp-topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    gap: 12px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 22px;
+  }
+
+  .tp-brand{ display:flex; align-items:center; gap: 12px; }
+  .tp-mark{
+    width: 44px; height: 44px; border-radius: 6px;
+    background: linear-gradient(135deg, rgba(220,38,38,0.10), rgba(234,88,12,0.12));
+    border: 1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .tp-mark span{ font-size: 22px; }
+  .tp-brandname strong{ display:block; font-size: 14px; letter-spacing: 0.2px; }
+  .tp-brandname small{ display:block; font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  .tp-pill{
+    display:inline-flex; align-items:center; gap: 8px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.70);
+    color: var(--muted);
+    font-size: 13px;
+  }
+
+  .tp-grid{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  .tp-title{
+    font-size: clamp(30px, 4vw, 48px);
+    letter-spacing: -0.02em;
+  }
+
+  .tp-sub{
+    font-size: 16px;
+    max-width: 64ch;
+  }
+
+  .tp-cta{
+    display:flex; gap: 10px; flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .tp-btn{
+    display:inline-flex; align-items:center; justify-content:center; gap: 10px;
+    padding: 12px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.80);
+    font-weight: 700;
+    font-size: 14px;
+    transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+    cursor: pointer;
+  }
+  .tp-btn:hover{ transform: translateY(-1px); box-shadow: 0 10px 22px rgba(31,41,55,0.10); background: rgba(255,255,255,0.92); }
+  .tp-btnPrimary{
+    border: 1px solid rgba(220,38,38,0.30);
+    background: rgba(220,38,38,0.10);
+    color: var(--tomato);
+  }
+  .tp-btnGhost{
+    color: var(--muted);
+    font-weight: 650;
+  }
+
+  .tp-card{
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.80);
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: var(--shadow);
+  }
+
+  .tp-card h3{ font-size: 16px; margin-bottom: 10px; }
+  .tp-highlight{
+    display:flex; gap: 10px; align-items:flex-start;
+    border: 1px solid rgba(21,128,61,0.20);
+    background: rgba(21,128,61,0.06);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-top: 12px;
+  }
+  .tp-highlight b{ color: var(--ink); }
+  .tp-highlight span{ color: var(--muted); font-size: 13px; line-height: 1.5; }
+
+  .tp-section{
+    margin-top: 16px;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.72);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+  .tp-section h2{ font-size: 18px; }
+
+  .tp-steps{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .tp-step{
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.85);
+    border-radius: 6px;
+    padding: 14px;
+  }
+  .tp-step strong{ display:block; font-size: 14px; margin-bottom: 6px; }
+  .tp-step p{ font-size: 13px; margin:0; color: var(--muted); }
+
+  .tp-mini{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .tp-miniBox{
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,0.90);
+    border-radius: 6px;
+    padding: 12px;
+  }
+  .tp-miniBox strong{ display:block; font-size: 14px; margin-bottom: 4px; }
+  .tp-miniBox span{ font-size: 12px; color: var(--muted); }
+
+  .tp-foot{
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .tp-mutedLink{ text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 920px){
+    .tp-grid{ grid-template-columns: 1fr; }
+    .tp-steps{ grid-template-columns: 1fr; }
+    .tp-mini{ grid-template-columns: 1fr; }
+    .tp-topbar{ flex-direction: column; align-items:flex-start; }
+  }
+</style>
+
+<section class="tp-wrap">
+  <div class="tp-hero">
+    <div class="tp-container">
+
+      <div class="tp-topbar">
+        <div class="tp-brand">
+          <div class="tp-mark" aria-hidden="true"><span>🍅</span></div>
+          <div class="tp-brandname">
+            <strong>Pick the Right Tomato</strong>
+            <small>Expert variety recommendations matched to your garden</small>
+          </div>
+        </div>
+
+        <div class="tp-pill">
+          <span>🌱</span>
+          <span>Free tool · Launching soon</span>
+        </div>
+      </div>
+
+      <div class="tp-grid">
+        <!-- LEFT: main pitch -->
+        <div class="tp-card">
+          <h1 class="tp-title">Find the perfect tomato variety for your garden</h1>
+          <p class="tp-sub">
+            With hundreds of tomato varieties available, choosing the right one can be overwhelming. 
+            This site provides expert-guided recommendations based on your specific growing conditions, 
+            available space, and culinary preferences — whether you're growing for fresh eating, 
+            canning, sauce-making, or container gardening.
+          </p>
+
+          <div class="tp-cta">
+            <a class="tp-btn tp-btnPrimary" href="#seed-sources">View seed sources</a>
+            <a class="tp-btn" href="#how-it-works">How it works</a>
+            <a class="tp-btn tp-btnGhost" href="#disclosure">Affiliate disclosure</a>
+          </div>
+
+          <div class="tp-mini">
+            <div class="tp-miniBox">
+              <strong>Personalized</strong>
+              <span>Matched to your climate, space, and growing style</span>
+            </div>
+            <div class="tp-miniBox">
+              <strong>Evidence-based</strong>
+              <span>Clear reasoning for every recommendation</span>
+            </div>
+            <div class="tp-miniBox">
+              <strong>Practical</strong>
+              <span>Filters for season length, plant size, and disease resistance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: credibility + affiliate intent -->
+        <div class="tp-card" id="seed-sources">
+          <h3>Recommended seed sources</h3>
+          <p>
+            This site partners with reputable seed companies known for quality genetics, 
+            reliable germination rates, and excellent customer service.
+          </p>
+
+          <div class="tp-highlight">
+            <div style="font-weight:900;">⭐</div>
+            <div>
+              <b>Featured partner: West Coast Seeds</b><br/>
+              <span>
+                Established supplier with extensive variety selection and detailed growing information. 
+                Ships to US, Canada, and international locations.
+              </span>
+            </div>
+          </div>
+          
+          <a href="https://www.westcoastseeds.com/?rfsn=8639095.6ec160" target="_blank" rel="noopener" class="tp-btn" style="margin-top: 12px; width: 100%;">
+            Browse West Coast Seeds →
+          </a>
+
+          <div class="tp-section" style="margin-top:12px;">
+            <h2 style="margin:0 0 8px; font-size:16px;">Coming features</h2>
+            <ul>
+              <li><b>Interactive variety picker:</b> Answer questions about your garden and get ranked recommendations</li>
+              <li><b>Curated shortlists:</b> "Best for sauce," "Best for containers," "Best for short seasons"</li>
+              <li><b>Growing guides:</b> Variety-specific cultivation tips and troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tp-section" id="how-it-works">
+        <h2>How the variety picker works</h2>
+        <div class="tp-steps">
+          <div class="tp-step">
+            <strong>1. Define your needs</strong>
+            <p>Specify intended use (fresh, sauce, canning), flavor preferences, and desired fruit characteristics.</p>
+          </div>
+          <div class="tp-step">
+            <strong>2. Enter growing conditions</strong>
+            <p>Input season length, available space, container vs. in-ground, and disease concerns in your region.</p>
+          </div>
+          <div class="tp-step">
+            <strong>3. Receive ranked recommendations</strong>
+            <p>Get personalized variety suggestions with detailed explanations for each match.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tp-section" id="disclosure">
+        <h2>Affiliate disclosure</h2>
+        <p>
+          This site may contain affiliate links to seed suppliers and gardening products. 
+          When you make a purchase through these links, this site may earn a commission at no additional cost to you. 
+          All recommendations are based on variety performance, supplier reliability, and relevance to specific growing conditions — 
+          not commission rates. Affiliate partnerships help support the ongoing development and maintenance of this resource.
+        </p>
+      </div>
+
+      <div class="tp-foot">
+        <p>© 2025 Pick the Right Tomato · <a href="mailto:contact@picktherighttomato.com" class="tp-mutedLink">contact@picktherighttomato.com</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
