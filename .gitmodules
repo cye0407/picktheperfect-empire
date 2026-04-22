@@ -7,3 +7,9 @@
 [submodule "flowers/flower-picker"]
 	path = flowers/flower-picker
 	url = https://github.com/cye0407/pick-the-perfect-flower.git
+[submodule "potatoes/potato-picker"]
+	path = potatoes/potato-picker
+	url = https://github.com/cye0407/pick-the-perfect-potato.git
+[submodule "tomatoes/tomato-picker"]
+	path = tomatoes/tomato-picker
+	url = https://github.com/cye0407/tomato-picker.git
